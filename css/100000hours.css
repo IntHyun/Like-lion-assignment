@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2')
+            format('woff2'),
+        url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff')
+            format('woff'),
+        url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf')
+            format('opentype');
+}
+
+.screen-out {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #5b2386;
+}
+
+.hours-rule-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hours-rule-image {
+    position: absolute;
+    margin-top: 120px;
+    width: 564px;
+    height: 112px;
+}
+
+.clock-image {
+    margin-top: 50px;
+}
+
+.practice-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.practice-image {
+    margin-top: 53px;
+}
+
+.hours-rule-text-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+
+.select {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.text-hours-rule {
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.quotes-image {
+    margin-top: 25px;
+}
+
+.wannabe-text-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wannabe,
+.today-prac {
+    margin: 15px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.hope-expert,
+.hours-prac {
+    width: 228px;
+    height: 57px;
+    border-radius: 10px;
+    border: none;
+}
+
+.click-btn {
+    margin-top: 100px;
+    width: 565px;
+    height: 66px;
+    padding: 21px 49px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    background-color: #fcee21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    border: none;
+    color: #5b2386;
+}
+
+.click-btn:hover {
+    cursor: pointer;
+}
+
+.click-image {
+    position: relative;
+    left: 320px;
+    bottom: 55px;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+}
+
+.result-container.hidden {
+    display: none;
+}
+
+.hope-result,
+.hours-result {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 5px;
+}
+
+.result-select {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+}
+
+.btn-go,
+.btn-share {
+    margin-top: 127px;
+    width: 350px;
+    height: 66px;
+    background-color: #fcee21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    color: #5b2386;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    border: none;
+}
+
+.btn-go,
+.btn-share:hover {
+    cursor: pointer;
+}
+
+.btn-share {
+    background-color: #ffffff;
+    margin-left: 30px;
+}
+
+.alright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-image {
+    width: 125px;
+    height: 25px;
+    margin: 20px;
+}
+
+.txt-footer {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ffffff;
+}
+
+.txt-footer.txt-footer-select {
+    margin-bottom: 50px;
+}
