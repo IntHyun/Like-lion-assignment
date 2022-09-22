@@ -41,6 +41,7 @@
                 <p class="wannabe">
                     나는
                     <input
+                        required
                         class="hope-expert"
                         type="text"
                         placeholder="예)프로그래밍"
@@ -49,7 +50,13 @@
                 </p>
                 <p class="today-prac">
                     그래서 앞으로 매일 하루에
-                    <input class="hours-prac" type="text" placeholder="예)5" />
+                    <input
+                        max="24"
+                        required
+                        class="hours-prac"
+                        type="number"
+                        placeholder="예)5"
+                    />
                     시간씩 훈련할 것이다.
                 </p>
                 <button class="click-btn" type="submit">
@@ -107,5 +114,9 @@
             </section> -->
         </footer>
         <script src="js/10000hours.js"></script>
+        <script
+            src="https://kit.fontawesome.com/01c5f6e68d.js"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
