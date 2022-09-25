@@ -1,45 +1,265 @@
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap%27');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+:root {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+
+/* 리셋 */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+button {
+    padding: 0;
+}
+
 body {
-    margin: 0;
+    background-color: #eae8fe;
 }
 
-figure {
-    margin: 0;
+/* 글자 숨김 */
+.screen-out {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 
+/* 메인 로고 */
 .img-wrapper {
     text-align: center;
+    margin-bottom: 82px;
 }
 
-.img-logo {
-    width: 436px;
+/* 전체 태그 감싸줌 */
+.whole-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-.wrapper-bend {
-    border: 1px solid black;
-    padding: 27px;
+/* 왼쪽 박스 */
+.left-box {
     width: 360px;
-    margin: 0 auto;
+    margin-right: 28px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.cola-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 12px;
 }
 
-.box-cola {
-    border: 1px solid black;
+.cola-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    padding: 12px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 25%);
+    border-radius: 5px;
 }
 
-.img-cola {
-    background-color: orangered;
+.cola-btn:hover {
+    cursor: pointer;
 }
 
-.text1 {
-    background-color: aqua;
+.cola-img {
+    width: 36px;
+    height: 65px;
+}
+
+.cola-text {
+    font-size: 9px;
+    margin: 5px auto;
+    font-weight: 500;
+    line-height: 13px;
+}
+
+.cola-text-won {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 22px;
+    vertical-align: middle;
+    background-color: #6327fe;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 12px;
 }
 
 .get-cola {
+    margin-top: 12px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: 200px 94px;
+    gap: 12px;
+}
+
+.counting-money {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eae8fe;
+    height: 33px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.payback {
+    border-radius: 5px;
+    border: none;
+    font-size: 13px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+}
+
+.payback:hover {
+    cursor: pointer;
+}
+
+.put-money {
+    height: 33px;
+    border: none;
+    box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+}
+
+.order-cola-list {
+    height: 106px;
+    background-color: #eae8fe;
+    padding: 12px;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+}
+
+.order-cola-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.order-cola-list::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
+.order-cola-list::-webkit-scrollbar-track {
+    margin: 5px;
+}
+
+.input-cola {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 46px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+}
+
+.poket-cola {
+    width: 18px;
+    height: 33px;
+    margin-left: 8px;
+}
+
+.cola-text.input-cola-text {
+    vertical-align: 12px;
+    margin-left: 7px;
+}
+
+.cola-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 8px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+}
+
+.my-cola {
+    background-color: #6327fe;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 25%);
+    color: #fff;
+    font-weight: 700;
+}
+
+.my-cola:hover {
+    cursor: pointer;
+}
+
+/* 오른쪽 박스 */
+.counting-money.my-money {
+    width: 360px;
+    margin-bottom: 28px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.counting-money.flex-wrap {
+    width: 306px;
+    margin: 0 auto;
+}
+
+.only-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.get-juice {
+    width: 360px;
+    height: 472px;
+    background-color: #fff;
+}
+
+.save-my-cola-list {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 20px 146px;
+    display: inline-block;
+    width: max-content;
+}
+
+.order-cola-list.save-my-cola {
+    height: 364px;
+    width: 306px;
+    margin: 0 auto;
+}
+
+.whole-money {
+    float: right;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 24px;
+    margin-top: 12px;
 }

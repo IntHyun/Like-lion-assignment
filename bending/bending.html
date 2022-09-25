@@ -5,28 +5,316 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="bending.css" />
     </head>
     <body>
         <!-- img파일만 독립적으로 하려고 했는데 가운데 정렬이 힘들어 div태그 만들어서 text-align으로 가운데정렬 -->
         <div class="img-wrapper">
-            <img class="img-logo" src="images/logo.png" alt="" />
+            <img src="images/logo.png" alt="" />
         </div>
-        <section class="wrapper-bend">
-            <figure class="img-cola">콜라콜라</figure>
-            <figure class="img-cola">보라콜라</figure>
-            <figure class="img-cola">노랑콜라</figure>
-            <figure class="img-cola">쿨콜라</figure>
-            <figure class="img-cola">그린콜라</figure>
-            <figure class="img-cola">오렌콜라</figure>
-            <div class="get-cola">
-                <input type="text" value="잔액: 1,000원" />
-                <button type="button">거스름돈 반환</button>
-                <input type="text" placeholder="입금액 입력" />
-                <button>입금</button>
-                <div class="box-cola">콜라박스</div>
-                <button>획득</button>
-            </div>
-        </section>
+        <div class="whole-wrapper">
+            <section class="left-box">
+                <h2 class="screen-out">음료 자판기</h2>
+                <!-- 그리드에 생기는 알수없는 빈공간은 box-sizing: border-box로 해결 -->
+                <ul class="cola-wrapper">
+                    <li>
+                        <button class="cola-btn">
+                            <img
+                                class="cola-img"
+                                src="images/Original_Cola.png"
+                                alt=""
+                            />
+                            <span class="cola-text">Original-cola</span>
+                            <span class="cola-text-won">1000원</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="cola-btn">
+                            <img
+                                class="cola-img"
+                                src="images/Violet_Cola.png"
+                                alt=""
+                            />
+                            <span class="cola-text">Violet_Cola</span>
+                            <span class="cola-text-won">1000원</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="cola-btn">
+                            <img
+                                class="cola-img"
+                                src="images/Yellow_Cola.png"
+                                alt=""
+                            />
+                            <span class="cola-text">Yellow_Cola</span>
+                            <span class="cola-text-won">1000원</span>
+                        </button>
+                    </li>
+                    <li class="cola-list">
+                        <button class="cola-btn">
+                            <img
+                                class="cola-img"
+                                src="images/Cool_Cola.png"
+                                alt=""
+                            />
+                            <span class="cola-text">Cool_Cola</span>
+                            <span class="cola-text-won">1000원</span>
+                        </button>
+                    </li>
+                    <li class="cola-list">
+                        <button class="cola-btn">
+                            <img
+                                class="cola-img"
+                                src="images/Green_Cola.png"
+                                alt=""
+                            />
+                            <span class="cola-text">Green_Cola</span>
+                            <span class="cola-text-won">1000원</span>
+                        </button>
+                    </li>
+                    <li class="cola-list">
+                        <button class="cola-btn">
+                            <img
+                                class="cola-img"
+                                src="images/Orange_Cola.png"
+                                alt=""
+                            />
+                            <span class="cola-text">Orange_Cola</span>
+                            <span class="cola-text-won">1000원</span>
+                        </button>
+                    </li>
+                </ul>
+                <form class="get-cola">
+                    <div class="counting-money">
+                        <span>잔액:</span>
+                        <span>원</span>
+                    </div>
+                    <button class="payback">거스름돈 반환</button>
+                    <input
+                        class="put-money"
+                        type="text"
+                        placeholder="입금액 입력"
+                    />
+                    <button class="payback">입금</button>
+                    <ol class="order-cola-list">
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">1</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Green_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Green-cola</span
+                                >
+                            </span>
+
+                            <span class="cola-num">2</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Orange_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Orange-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                    </ol>
+                    <button class="my-cola">획득</button>
+                </form>
+            </section>
+            <section>
+                <h2 class="screen-out">현재 소지금과 획득한 음료</h2>
+                <div class="counting-money my-money">
+                    <div class="counting-money flex-wrap">
+                        <span class="only-text">소지금:</span>
+                        <span class="only-text">25,000 원</span>
+                    </div>
+                </div>
+                <div class="get-juice">
+                    <span class="save-my-cola-list">획득한 음료</span>
+                    <ol class="order-cola-list save-my-cola">
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">1</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">2</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                        <li class="input-cola">
+                            <span>
+                                <img
+                                    class="poket-cola"
+                                    src="images/Original_Cola.png"
+                                    alt=""
+                                />
+                                <span class="cola-text input-cola-text"
+                                    >Original-cola</span
+                                >
+                            </span>
+                            <span class="cola-num">3</span>
+                        </li>
+                    </ol>
+                    <span class="whole-money">총금액 : 9,000 원</span>
+                </div>
+            </section>
+        </div>
     </body>
 </html>
