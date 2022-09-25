@@ -7,7 +7,6 @@
 
 :root {
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
 }
 
 /* 리셋 */
@@ -49,13 +48,15 @@ body {
 .whole-wrapper {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 /* 왼쪽 박스 */
 .left-box {
     width: 360px;
     margin-right: 28px;
-    padding: 30px;
+    padding: 27px;
     background-color: #fff;
 }
 
@@ -80,6 +81,13 @@ body {
 
 .cola-btn:hover {
     cursor: pointer;
+    border: 3px solid #6327fe;
+    margin: -3px;
+}
+
+.cola-btn:focus {
+    border: 3px solid #6327fe;
+    margin: -3px;
 }
 
 .cola-img {
@@ -262,4 +270,16 @@ body {
     font-weight: 500;
     margin-right: 24px;
     margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+    .img-wrapper img {
+        width: 166px;
+        height: 71px;
+    }
+
+    .right_box {
+        background-color: white;
+        margin-left: -27px;
+    }
 }
