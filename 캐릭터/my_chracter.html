@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: rebeccapurple;
+            }
+
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+            }
+
+            .chac {
+                position: relative;
+                background-color: rebeccapurple;
+                top: 100px;
+                height: 505px;
+                width: 350px;
+                margin: 100px auto;
+                z-index: 1;
+            }
+
+            .face {
+                position: absolute;
+                width: 350px;
+                height: 505px;
+
+                border-radius: 50%;
+                background-color: #b3bdbe;
+                box-shadow: -8px 20px 34px;
+                z-index: 4;
+            }
+
+            .eye-line {
+                position: absolute;
+                top: 160px;
+                width: 95px;
+                height: 49px;
+                border: 5px solid black;
+                margin: -52px;
+                border-radius: 50%;
+                box-shadow: 0px 7px 5px black;
+                background-color: white;
+            }
+
+            .eye-line.right {
+                left: 67px;
+            }
+
+            .eye-line.left {
+                right: 67px;
+            }
+
+            .eye {
+                position: absolute;
+                top: 118px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: black;
+            }
+
+            .eye.left {
+                left: 30px;
+            }
+
+            .eye.right {
+                right: 65px;
+            }
+
+            .blind {
+                position: absolute;
+                top: 71px;
+                left: 147px;
+                width: 69px;
+                height: 42px;
+                background-color: #b3bdbe;
+                z-index: 1;
+            }
+
+            .blind.mouth {
+                background-color: #ad5c5b;
+                height: 41px;
+                box-shadow: 0px -4px 2px;
+                transform: rotate(180deg);
+            }
+
+            .nose {
+                position: absolute;
+                top: 77px;
+                left: 42%;
+                width: 50px;
+                height: 213px;
+                border-radius: 0 0 36px 36px;
+                box-shadow: -7px 4px 8px;
+                opacity: 0.9;
+                background-color: #b3bdcb;
+            }
+
+            .injung {
+                border: 1px solid black;
+                height: 65px;
+                width: 0px;
+                position: absolute;
+                box-shadow: -1px 3px 3px;
+                top: 287px;
+                opacity: 0.6;
+            }
+
+            .injung.left {
+                left: 152px;
+            }
+
+            .injung.right {
+                right: 165px;
+            }
+
+            .mouth {
+                position: absolute;
+                width: 202px;
+                height: 82px;
+                border: 0px solid black;
+                border-radius: 44% 44% 60% 60%;
+                top: 358px;
+                left: 61px;
+                box-shadow: 0px 15px 24px;
+                background-color: #ad5c5b;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chac">
+            <div class="face">
+                <div class="eye-line left"></div>
+                <div class="eye-line right"></div>
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="blind"></div>
+                <div class="nose"></div>
+                <div class="injung left"></div>
+                <div class="injung right"></div>
+                <div class="blind mouth"></div>
+
+                <div class="mouth"></div>
+            </div>
+        </div>
+    </body>
+</html>
