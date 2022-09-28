@@ -1,0 +1,174 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+    /*
+	font-weight: 500;
+	font-weight: 700;
+	*/
+}
+
+/* 초기화 */
+h1 {
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+/* 초기화 */
+
+body {
+    background-color: #51318b;
+}
+
+/* header */
+.whole-container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.portfolio-container {
+    display: flex;
+    margin: 100px 0px;
+}
+
+.portfolio-container .portfolio {
+    color: white;
+    width: 26%;
+    font-size: 40px;
+}
+
+.portfolio span {
+    position: relative;
+}
+
+span:first-child::before {
+    position: absolute;
+    content: '';
+    width: 229px;
+    border: 8px solid #d9501a;
+    top: 79px;
+    right: 14px;
+    /* z-index를 -1을줬을때 움직이는 이유 */
+    z-index: -1;
+}
+
+span:last-child::before {
+    position: absolute;
+    content: '';
+    width: 176px;
+    border: 8px solid #d9501a;
+    top: 79px;
+    right: 52px;
+    z-index: -1;
+}
+
+.portfolio-text::before {
+    position: absolute;
+    content: '';
+    width: 23%;
+    border: 1px solid #a887e1;
+    right: 485px;
+    top: 35px;
+}
+
+.portfolio-text {
+    position: relative;
+    color: #a887e1;
+    margin: 45px 150px;
+    margin-top: 17px;
+    line-height: 1.5;
+    font-size: 14px;
+    top: 19px;
+    width: 42%;
+}
+/* header */
+
+/* main */
+.rest-container {
+    position: relative;
+    display: flex;
+    margin: 24px 0;
+}
+
+.image-rest {
+    width: 26%;
+    opacity: 0.4;
+}
+
+.text-container {
+    padding: 24px;
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+.text-rest {
+    color: #ffffff;
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    right: 83%;
+    transform: translate(-9%, -85%);
+}
+
+.craft-container {
+    position: relative;
+    flex-direction: row-reverse;
+    display: flex;
+    margin: 24px 0;
+}
+
+/*여기 텍스트를 이렇게 배치하는 게 맞는건지 */
+.text-craft {
+    color: #ffffff;
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    right: 9%;
+    transform: translate(-9%, -85%);
+}
+
+.list-container {
+    position: relative;
+    margin-left: -18px;
+}
+
+li {
+    position: relative;
+    font-size: 14px;
+    line-height: 2.4;
+}
+
+.text-select {
+    color: #51318b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-container li::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: 11px;
+    left: -22px;
+    border-radius: 100%;
+    background-color: #a887e1;
+}
+
+.scrap-container {
+    margin-bottom: 100px;
+}
