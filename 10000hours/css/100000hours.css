@@ -41,6 +41,15 @@
     font-style: normal;
 }
 
+@keyframes rotate {
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 :root {
     font-family: 'GmarketSansMedium';
 }
@@ -63,13 +72,13 @@ body {
 .hours-rule-container {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .hours-rule-image {
     position: absolute;
     margin-top: 120px;
-    width: 564px;
-    height: 112px;
+    height: 36%;
 }
 
 .clock-image {
@@ -130,18 +139,22 @@ body {
 .hours-prac {
     width: 228px;
     height: 57px;
+    margin: 10px auto;
     border-radius: 10px;
     border: none;
 }
 
+.test {
+    position: relative;
+}
+
 .click-btn {
-    margin-top: 100px;
-    width: 565px;
-    height: 66px;
-    padding: 21px 49px;
+    overflow: hidden;
+    margin: 90px auto;
+    padding: 18px 68px;
     font-weight: 700;
     font-size: 22px;
-    line-height: 22px;
+    /* line-height: 22px; */
     background-color: #fcee21;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 56px;
@@ -154,16 +167,33 @@ body {
 }
 
 .click-image {
-    position: relative;
-    left: 320px;
-    bottom: 55px;
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+}
+
+.loading-img-container {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 50px;
+}
+
+.loading-img-container img {
+    width: 100%;
+    height: auto;
+    animation: rotate 1.1s infinite linear;
+}
+
+.loading-img-container.hidden {
+    display: none;
 }
 
 .result-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px auto;
+    margin: 0 auto;
 }
 
 .result-container.hidden {
@@ -176,7 +206,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
-    margin: 5px;
+    padding: 5px;
 }
 
 .result-select {
@@ -185,18 +215,21 @@ body {
     line-height: 72px;
 }
 
+.btn-container {
+    display: flex;
+    gap: 30px;
+    padding: 90px 0;
+}
+
 .btn-go,
 .btn-share {
-    margin-top: 127px;
-    width: 350px;
-    height: 66px;
+    padding: 17px 51px;
     background-color: #fcee21;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 56px;
     color: #5b2386;
     font-weight: 700;
     font-size: 24px;
-    line-height: 24px;
     border: none;
 }
 
@@ -207,19 +240,19 @@ body {
 
 .btn-share {
     background-color: #ffffff;
-    margin-left: 30px;
 }
 
 .alright-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 90px;
 }
 
 .logo-image {
     width: 125px;
     height: 25px;
-    margin: 20px;
+    padding: 20px;
 }
 
 .txt-footer {
@@ -227,8 +260,4 @@ body {
     font-size: 12px;
     line-height: 17px;
     color: #ffffff;
-}
-
-.txt-footer.txt-footer-select {
-    margin-bottom: 50px;
 }
