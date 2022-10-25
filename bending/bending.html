@@ -27,7 +27,7 @@
                                 src="images/Original_Cola.png"
                                 alt=""
                             />
-                            <span class="cola-text">Original-cola</span>
+                            <span class="cola-text">Original_cola</span>
                             <span class="cola-text-won">1000원</span>
                         </button>
                     </li>
@@ -90,7 +90,7 @@
                 <form class="get-cola">
                     <div class="counting-money">
                         <span>잔액:</span>
-                        <span>원</span>
+                        <span class="select-won">0 원</span>
                     </div>
                     <button class="payback">거스름돈 반환</button>
                     <input
@@ -98,9 +98,9 @@
                         type="text"
                         placeholder="입금액 입력"
                     />
-                    <button class="payback">입금</button>
+                    <button id="put-money-btn" class="payback">입금</button>
                     <ol class="order-cola-list">
-                        <li class="input-cola">
+                        <!-- <li class="input-cola">
                             <span>
                                 <img
                                     class="poket-cola"
@@ -112,8 +112,8 @@
                                 >
                             </span>
                             <span class="cola-num">1</span>
-                        </li>
-                        <li class="input-cola">
+                        </li> -->
+                        <!-- <li class="input-cola">
                             <span>
                                 <img
                                     class="poket-cola"
@@ -139,7 +139,7 @@
                                 >
                             </span>
                             <span class="cola-num">3</span>
-                        </li>
+                        </li> -->
                     </ol>
                     <button class="my-cola">획득</button>
                 </form>
@@ -149,12 +149,12 @@
                 <div class="counting-money my-money">
                     <div class="counting-money flex-wrap">
                         <span class="only-text">소지금:</span>
-                        <span class="only-text">25,000 원</span>
+                        <span id="soji-money" class="only-text">0 원</span>
                     </div>
                 </div>
                 <div class="get-juice">
                     <span class="save-my-cola-list">획득한 음료</span>
-                    <ol class="order-cola-list save-my-cola">
+                    <ol id="orderd-cola" class="order-cola-list save-my-cola">
                         <li class="input-cola">
                             <span>
                                 <img
@@ -168,7 +168,7 @@
                             </span>
                             <span class="cola-num">1</span>
                         </li>
-                        <li class="input-cola">
+                        <!-- <li class="input-cola">
                             <span>
                                 <img
                                     class="poket-cola"
@@ -310,11 +310,12 @@
                                 >
                             </span>
                             <span class="cola-num">3</span>
-                        </li>
+                        </li> -->
                     </ol>
-                    <span class="whole-money">총금액 : 9,000 원</span>
+                    <span class="whole-money">총금액 : 0 원</span>
                 </div>
             </section>
         </div>
+        <script src="bending.js"></script>
     </body>
 </html>
